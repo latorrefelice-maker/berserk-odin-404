@@ -14,9 +14,11 @@
       --text: #fff;
       --border: #2a2a2a;
     }
+
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -24,6 +26,7 @@
       color: var(--text);
       text-align: center;
     }
+
     h1 {
       margin: 0;
       padding: 30px 0 10px;
@@ -31,6 +34,7 @@
       letter-spacing: 0.5px;
       font-weight: 800;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -39,6 +43,7 @@
       max-width: 1200px;
       margin: 0 auto 40px;
     }
+
     .card {
       position: relative;
       background: linear-gradient(180deg, #222 0%, var(--card) 100%);
@@ -50,18 +55,21 @@
       overflow: visible;
       z-index: 0;
     }
+
     .card:hover {
       transform: translateY(-2px);
       border-color: #3a3a3a;
       box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
       z-index: 10;
     }
+
     .avatar-wrap {
       position: relative;
       width: 128px;
       height: 128px;
       margin: 6px auto 12px;
     }
+
     .avatar {
       width: 128px;
       height: 128px;
@@ -71,10 +79,12 @@
       border: 2px solid #2d2d2d;
       display: block;
     }
+
     .name {
       font-weight: 800;
       margin: 6px 0 6px;
     }
+
     .links {
       display: flex;
       justify-content: center;
@@ -83,6 +93,7 @@
       margin-top: 8px;
       flex-wrap: wrap;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -97,20 +108,24 @@
       font-weight: 800;
       transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
     }
+
     .btn:hover {
       transform: translateY(-1px);
       box-shadow: 0 10px 22px rgba(255, 0, 51, 0.45);
       background: #ff2a4c;
     }
+
     .btn-main {
       padding: 12px 16px;
       font-size: 1rem;
     }
+
     .btn-ghost {
       padding: 9px 12px;
       font-size: 0.9rem;
       opacity: 0.95;
     }
+
     .album-popover {
       position: absolute;
       left: 50%;
@@ -127,6 +142,7 @@
       display: none;
       z-index: 9999;
     }
+
     .album-popover:before {
       content: "";
       position: absolute;
@@ -137,25 +153,30 @@
       border-style: solid;
       border-color: transparent transparent #343434 transparent;
     }
+
     .album-popover h3 {
       margin: 0 0 6px;
       font-size: 0.85rem;
       color: #e6e6e6;
     }
+
     .album-list {
       margin: 0;
       padding-left: 18px;
       white-space: nowrap;
       list-style: none;
     }
+
     .album-list li {
       margin: 2px 0;
       font-size: 0.82rem;
     }
+
     .avatar-wrap:hover + .album-popover,
     .album-popover:hover {
       display: block;
     }
+
     footer {
       opacity: 0.6;
       font-size: 0.85rem;
@@ -223,4 +244,294 @@
       </div>
       <div class="name">Battle Beast</div>
       <div class="links">
-        <a class="btn btn-main" href="https://www
+        <a class="btn btn-main" href="https://www.youtube.com/@BattleBeast/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCP-WfBfH4Tl3qpk-kua7fGg" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- BEAST IN BLACK -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/hAFEHVyXXy1t_tyHgmQKJr7lhYzEBw_R9gb1rddTb0flFCngARTBxC544C-zdJlQ05pjAXYOEg=s160-c-k-c0x00ffffff-no-rj"
+          alt="Beast in Black"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Beast in Black">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>2017 - Berserker</li>
+          <li>2019 - From Hell with Love</li>
+          <li>2021 - Dark Connection</li>
+        </ul>
+      </div>
+      <div class="name">Beast in Black</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@beastinblackofficial/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCZ6oHxEMKXlnjCzs_Ae55oA" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- DRAGONFORCE -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/ZTcoOFDZNKqJ3rHkZWLs55wXBmHDTdZZrvUUkVK2uPUfvxgxo2fFInSbipwiqgg2YuGRIBWUQ08=s160-c-k-c0x00ffffff-no-rj"
+          alt="DragonForce"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia DragonForce">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>2003 - Valley of the Damned</li>
+          <li>2004 - Sonic Firestorm</li>
+          <li>2006 - Inhuman Rampage</li>
+          <li>2008 - Ultra Beatdown</li>
+          <li>2012 - The Power Within</li>
+          <li>2014 - Maximum Overload</li>
+          <li>2017 - Reaching into Infinity</li>
+          <li>2019 - Extreme Power Metal</li>
+          <li>2024 - Warp Speed Warriors</li>
+        </ul>
+      </div>
+      <div class="name">DragonForce</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@dragonforce/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCIUA7-MNA9NyrpimQo7Dw8g" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- BROTHERS OF METAL -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/ytc/AIdro_mLFwPoVy7zlXA06DkTOirSEvQmA68bazRNRUphie5hbQ=s160-c-k-c0x00ffffff-no-rj"
+          alt="Brothers of Metal"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Brothers of Metal">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>2017 - Prophecy of Ragnarök</li>
+          <li>2020 - Emblas Saga</li>
+          <li>2024 - Fimbulvinter</li>
+        </ul>
+      </div>
+      <div class="name">Brothers of Metal</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@BrothersofMetalOfficial/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCjTRADohcFt4lKeVrd0Kuxg" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- ELUVEITIE -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/Tkt8Yy5QXhoSrISPqzPGPtkDh1931diyP2WnpdKd2pI_6ctGIrk51NdKlIVpU45aluTy_3m-F7Q=s160-c-k-c0x00ffffff-no-rj"
+          alt="Eluveitie"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Eluveitie">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>2006 - Spirit</li>
+          <li>2008 - Slania</li>
+          <li>2009 - Evocation I: The Arcane Dominion</li>
+          <li>2010 - Everything Remains (As It Never Was)</li>
+          <li>2012 - Helvetios</li>
+          <li>2014 - Origins</li>
+          <li>2017 - Evocation II: Pantheon</li>
+          <li>2019 - Ategnatos</li>
+          <li>2025 - ÀNV</li>
+        </ul>
+      </div>
+      <div class="name">Eluveitie</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@eluveitie/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UClV0x3k5Oxm7vREoLEOPeGg" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- ENSIFERUM -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/wJouomaEYOdaHg2n47gV7aQO5N3T6z6wHNWZ7VBp5B2THbqaXRspO2AkD9juQZdnFoIiym4VhA=s160-c-k-c0x00ffffff-no-rj"
+          alt="Ensiferum"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Ensiferum">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>2001 - Ensiferum</li>
+          <li>2004 - Iron</li>
+          <li>2007 - Victory Songs</li>
+          <li>2009 - From Afar</li>
+          <li>2012 - Unsung Heroes</li>
+          <li>2015 - One Man Army</li>
+          <li>2017 - Two Paths</li>
+          <li>2020 - Thalassic</li>
+          <li>2024 - Winter Storm</li>
+        </ul>
+      </div>
+      <div class="name">Ensiferum</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@EnsiferumTV/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCJSZkYiD1tDoyw2icpflQRQ" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- IRON SAVIOR -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/ytc/AIdro_kJkXBDE3gluNT27_X7vkNHYSuemTGWVMlpTM3Tiek-_Q=s160-c-k-c0x00ffffff-no-rj"
+          alt="Iron Savior"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Iron Savior">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <!-- Da compilare in futuro -->
+        </ul>
+      </div>
+      <div class="name">Iron Savior</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@PietSielck/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UC9sfU54ymZL_yPCQrQsms6g" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- ALESTORM -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/A4_xFx5y1TaWLRb3yiq_c38pJ0DVSD5nhgn9-VYsMSKfxZgwH_D_mjSQ0IG51lNqCMVoOVh7=s160-c-k-c0x00ffffff-no-rj"
+          alt="Alestorm"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Alestorm">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>2008 - Captain Morgan's Revenge</li>
+          <li>2009 - Black Sails at Midnight</li>
+          <li>2011 - Back Through Time</li>
+          <li>2014 - Sunset on the Golden Age</li>
+          <li>2017 - No Grave But the Sea</li>
+          <li>2020 - Curse of the Crystal Coconut</li>
+          <li>2022 - Seventh Rum of a Seventh Rum</li>
+          <li>2025 - The Thunderfist Chronicles</li>
+        </ul>
+      </div>
+      <div class="name">Alestorm</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@Alestorm/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCT9amsV69EwvjpTDLVqyewg" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- GAMMA RAY -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/uz_KcJsf05RhTzOmjt1dfOdhJLuFS1JuwRxqEe24gvjgyTRBRLHMVpIRbWdebkasBr_SnFIYMw=s160-c-k-c0x00ffffff-no-rj"
+          alt="Gamma Ray"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Gamma Ray">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>1990 - Heading for Tomorrow</li>
+          <li>1991 - Sigh No More</li>
+          <li>1993 - Insanity and Genius</li>
+          <li>1995 - Land of the Free</li>
+          <li>1997 - Somewhere Out in Space</li>
+          <li>1999 - Powerplant</li>
+          <li>2001 - No World Order</li>
+          <li>2005 - Majestic</li>
+          <li>2007 - Land of the Free II</li>
+          <li>2010 - To the Metal</li>
+          <li>2014 - Empire of the Undead</li>
+        </ul>
+      </div>
+      <div class="name">Gamma Ray</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/channel/UC34yDJRgqZZFJ25BjEvvCQQ" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UC34yDJRgqZZFJ25BjEvvCQQ" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- LUCA TURILLI -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/xmS811QkN-IEeV9vpW-xIjavo6Oef-x1zsaQ56TL8-g7MwLW_Cngk-nh6LR9J4Zxc4AaLL3DmtI=s160-c-k-c0x00ffffff-no-rj"
+          alt="Luca Turilli"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Luca Turilli">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>1999 - King of the Nordic Twilight</li>
+          <li>2002 - Prophet of the Last Eclipse</li>
+          <li>2006 - The Infinite Wonders of Creation</li>
+          <li>2006 - Lost Horizons</li>
+        </ul>
+      </div>
+      <div class="name">Luca Turilli</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/channel/UCvqiG-TMYWrD8HCAmtTNlag" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCvqiG-TMYWrD8HCAmtTNlag" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- PRIMAL FEAR -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/UpioRm47DQaOVhcOhxZ0kMl530qAhtXxQIyaD7OIRtcDLlmvNr1VyGFooQcUQTxnULOqh2UBemU=s160-c-k-c0x00ffffff-no-rj"
+          alt="Primal Fear"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Primal Fear">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>1998 - Primal Fear</li>
+          <li>1999 - Jaws of Death</li>
+          <li>2001 - Nuclear Fire</li>
+          <li>2002 - Black Sun</li>
+          <li>2004 - Devil's Ground</li>
+          <li>2005 - Seven Seals</li>
+          <li>2007 - New Religion</li>
+          <li>2009 - 16.6 (Before the Devil Knows You're Dead)</li>
+          <li>2012 - Unbreakable</li>
+          <li>2014 - Delivering the Black</li>
+          <li>2016 - Rulebreaker</li>
+          <li>2018 - Apocalypse</li>
+          <li>2020 - Metal Commando</li>
+          <li>2023 - Code Red</li>
+          <li>2025 - Domination</li>
+        </ul>
+      </div>
+      <div class="name">Primal Fear</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/channel/UCnksEYBV7qSwUIhTQR_ZGUw" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCrWNUYay0XJ7nJ_4u4uRk4A" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+  </div>
+  <footer>© 2025 Felice Latorre – Pagina iniziale personale</footer>
+</body>
+</html>
