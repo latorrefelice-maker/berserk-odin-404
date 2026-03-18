@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>I miei artisti YouTube — popover album su hover</title>
+  <link rel="icon" href="index_punk.png" type="image/png" />
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --accent: #ff0033;
+      --text: #fff;
+      --border: #2a2a2a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1b1b1b 0%, var(--bg) 60%);
+      color: var(--text);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 30px 0 10px;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .card {
+      position: relative;
+      background: linear-gradient(180deg, #222 0%, var(--card) 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 14px 20px;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      overflow: visible;
+      z-index: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #3a3a3a;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+      z-index: 10;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 128px;
+      height: 128px;
+      margin: 6px auto 12px;
+    }
+
+    .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #0b0b0b;
+      border: 2px solid #2d2d2d;
+      display: block;
+    }
+
+    .name {
+      font-weight: 800;
+      margin: 6px 0 6px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      line-height: 1;
+      text-decoration: none;
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 6px 16px rgba(255, 0, 51, 0.35);
+      border-radius: 12px;
+      font-weight: 800;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(255, 0, 51, 0.45);
+      background: #ff2a4c;
+    }
+
+    .btn-main {
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
+
+    .btn-ghost {
+      padding: 9px 12px;
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .album-popover {
+      position: absolute;
+      left: 50%;
+      top: 150px;
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: 90vw;
+      background: rgba(20, 20, 20, 0.98);
+      border: 1px solid #343434;
+      border-radius: 14px;
+      padding: 10px 12px 10px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      text-align: left;
+      display: none;
+      z-index: 9999;
+    }
+
+    .album-popover:before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 0 8px 8px 8px;
+      border-style: solid;
+      border-color: transparent transparent #343434 transparent;
+    }
+
+    .album-popover h3 {
+      margin: 0 0 6px;
+      font-size: 0.85rem;
+      color: #e6e6e6;
+    }
+
+    .album-list {
+      margin: 0;
+      padding-left: 18px;
+      white-space: nowrap;
+      list-style: none;
+    }
+
+    .album-list li {
+      margin: 2px 0;
+      font-size: 0.82rem;
+    }
+
+    .avatar-wrap:hover + .album-popover,
+    .album-popover:hover {
+      display: block;
+    }
+
+    footer {
+      opacity: 0.6;
+      font-size: 0.85rem;
+      padding: 12px 0 26px;
+    }
+  </style>
+</head>
+<body>
+  <h1>I miei artisti YouTube</h1>
+  <div class="grid">
+
+    <!-- GREEN DAY -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/NEt7WZ2Uua_dd2h_TZZzApAn87beUhIUapBH15lMc1PblAsTz2AzXEIfsWUktgXzPKrOFDL2Vg=s160-c-k-c0x00ffffff-no-rj"
+          alt="Green Day"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia Green Day">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>1990 - 39/Smooth</li>
+          <li>1991 - Kerplunk</li>
+          <li>1994 - Dookie</li>
+          <li>1995 - Insomniac</li>
+          <li>1997 - Nimrod</li>
+          <li>2000 - Warning</li>
+          <li>2004 - American Idiot</li>
+          <li>2009 - 21st Century Breakdown</li>
+          <li>2012 - ¡Uno!</li>
+          <li>2012 - ¡Dos!</li>
+          <li>2012 - ¡Tré!</li>
+          <li>2016 - Revolution Radio</li>
+          <li>2020 - Father of All Motherfuckers</li>
+          <li>2024 - Saviors</li>
+        </ul>
+      </div>
+      <div class="name">Green Day</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@GreenDay/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCqC_GY2ZiENFz2pwL0cSfAw" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+    <!-- THE OFFSPRING -->
+    <div class="card">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://yt3.googleusercontent.com/ecM_9i3LGcUzMXmrx7gEV5QH1t0MAmnirwKSL3RcvmttJHrhsm_UCYqqeKXBxBehy_ej2V2wS9E=s160-c-k-c0x00ffffff-no-rj"
+          alt="The Offspring"
+        />
+      </div>
+      <div class="album-popover" role="dialog" aria-label="Discografia The Offspring">
+        <h3>Discografia per anno</h3>
+        <ul class="album-list">
+          <li>1989 - The Offspring</li>
+          <li>1992 - Ignition</li>
+          <li>1994 - Smash</li>
+          <li>1997 - Ixnay on the Hombre</li>
+          <li>1998 - Americana</li>
+          <li>2000 - Conspiracy of One</li>
+          <li>2003 - Splinter</li>
+          <li>2008 - Rise and Fall, Rage and Grace</li>
+          <li>2012 - Days Go By</li>
+          <li>2021 - Let the Bad Times Roll</li>
+          <li>2024 - Supercharged</li>
+        </ul>
+      </div>
+      <div class="name">The Offspring</div>
+      <div class="links">
+        <a class="btn btn-main" href="https://www.youtube.com/@offspring/releases" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost" href="https://music.youtube.com/channel/UCP3EX5VKeaG4Oa2qTKPuEFA" target="_blank" rel="noopener">YT Music</a>
+      </div>
+    </div>
+
+  </div>
+  <footer>© 2025 Felice Latorre – Pagina iniziale personale</footer>
+</body>
+</html>
